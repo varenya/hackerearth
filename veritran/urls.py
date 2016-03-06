@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^paymentdetail_list/$', views.PaymentDetailList.as_view()),
     url(r'^paymentdetail/(?P<pk>[0-9]+)/$', views.PaymentDetails.as_view()),
+    url(r'^get_total/$', views.get_total_number),
 
 ]
