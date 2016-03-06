@@ -4,3 +4,5 @@ markdown
 django-filter
 MySQL-Python
 jsonpickle
+django-cors-headers
+djangorestframework-jsonp
