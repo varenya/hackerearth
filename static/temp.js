@@ -54,9 +54,13 @@ var SearchList = React.createClass({
     var searchResults = this.props.search.map(function(result){
       return (<MediaItem search_data={result} />);
     });
+    var total = searchResults.length;
     return (
       <ul className="media-list searchresults">
+	<li className="media"> Total Results : {total} </li>
+
         {searchResults}
+	
       </ul>
     );
   }
