@@ -1,0 +1,12 @@
+  
+         "id":"1",
+         "name":"VT-Link",
+         "image":"http:\/\/hackerearth.0x10.info\/api\/img?img=https:\/\/veritrans.co.id\/images\/vt-link_logo.png",
+         "description":"VT-Link facilitates a payment feature for your online store by redirecting the customer to Veritrans payment page through a link.",
+         "branding":"0",
+         "rating":"4.5",
+         "currencies":"IDR, SGD, THB, USD",
+         "setup_fee":"0",
+         "transaction_fees":"1%",
+         "how_to_url":"https:\/\/youtu.be\/O5k2154Difk"
+

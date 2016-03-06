@@ -1,0 +1,9 @@
+*~
+*.exe
+*.swp
+*.swo
+*.pyc
+/lib
+/bin
+/local
+/include
