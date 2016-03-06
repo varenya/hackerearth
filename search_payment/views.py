@@ -1,4 +1,6 @@
 from django.shortcuts import render
+import json
+from django.http import HttpResponse,HttpResponseRedirect
 
 # Create your views here.
 from search_payment.models import PaymentDetail
@@ -19,3 +21,10 @@ class PaymentDetails(generics.RetrieveUpdateDestroyAPIView):
     queryset = PaymentDetail.objects.all()
     serializer_class = PaymentDetailSerializer
 
+
+
+
+def get_total_number(request):
+    queryset = PaymentDetail.objects.all()
+    data = {"length": len(queryset)}
+    return HttpResponse(json.dumps(data),content_type="application/json")
