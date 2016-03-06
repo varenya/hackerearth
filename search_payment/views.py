@@ -1,6 +1,8 @@
 from django.shortcuts import render
 import json
 from django.http import HttpResponse,HttpResponseRedirect
+from django.shortcuts import render_to_response
+from django.template import RequestContext,Template
 
 # Create your views here.
 from search_payment.models import PaymentDetail
@@ -28,3 +30,7 @@ def get_total_number(request):
     queryset = PaymentDetail.objects.all()
     data = {"length": len(queryset)}
     return HttpResponse(json.dumps(data),content_type="application/json")
+
+def main_page(request):
+      resp = render_to_response("index.html")
+      return resp

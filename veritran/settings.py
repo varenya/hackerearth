@@ -59,7 +59,7 @@ ROOT_URLCONF = 'veritran.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,6 +133,7 @@ CORS_ALLOW_HEADERS = (
         'origin',
         'authorization',
     )
+APPEND_SLASH=False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
@@ -141,5 +142,9 @@ REST_FRAMEWORK = {
 			            'rest_framework_jsonp.renderers.JSONPRenderer',
 				        ),
 		    }
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 STATIC_URL = '/static/'

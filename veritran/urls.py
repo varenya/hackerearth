@@ -19,7 +19,7 @@ from django.contrib import admin
 from search_payment import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^$', views.main_page),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^paymentdetail_list/$', views.PaymentDetailList.as_view()),
     url(r'^paymentdetail/(?P<pk>[0-9]+)/$', views.PaymentDetails.as_view()),
